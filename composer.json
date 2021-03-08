@@ -22,8 +22,8 @@
   },
   "autoload": {
     "psr-4": {
-      "StiSolutions\\Apps\\Scoti\\Backend\\": "apps/scoti/backend/src",
-      "StiSolutions\\Apps\\Scoti\\Frontend\\": "apps/scoti/frontend/src",
+      "StiSolutions\\Apps\\Scuti\\Backend\\": "apps/scuti/backend/src",
+      "StiSolutions\\Apps\\Scuti\\Frontend\\": "apps/scuti/frontend/src",
 
       "StiSolutions\\Apps\\Imovit\\Backend\\": "apps/imovit/backend/src",
       "StiSolutions\\Apps\\Imovit\\Frontend\\": "apps/imovit/frontend/src",
