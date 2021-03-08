@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace CodelyTv\Shared\Infrastructure;
+namespace StiSolutions\Shared\Infrastructure;
 
 final class RandomNumberGenerator
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace StiSolutions\Apps\Imovit\Backend\Controller\HealthCheck;
+namespace StiSolutions\Apps\Scuti\Backend\Controller\HealthCheck;
 
 use StiSolutions\Shared\Infrastructure\RandomNumberGenerator;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -22,7 +22,7 @@ final class HealthCheckGetController
     {
         return new JsonResponse(
             [
-                'app' => 'imovit',
+                'app' => 'scuti',
                 'status' => 'ok',
                 'rand'         => $this->generator->generate(),
             ]
