@@ -2,18 +2,18 @@
   "name": "codelytv/ddd-skeleton",
   "license": "MIT",
   "type": "project",
-  "description": "DDD php Skeleton - Monorepository",
+  "description": "StiSolutions - Monorepository",
   "require": {
-    "php": ">7.2",
+    "php": ">=7.2.5",
 
     "ext-apcu": "*",
     "ext-json": "*",
     "ext-zend-opcache": "*",
     "ext-pdo": "*",
 
-    "symfony/framework-bundle": "^4.3",
-    "symfony/dotenv": "^4.3",
-    "symfony/yaml": "^4.3"
+    "symfony/framework-bundle": "5.2.*",
+    "symfony/dotenv": "5.2.*",
+    "symfony/yaml": "5.2.*"
   },
   "require-dev": {
     "ext-xdebug": "*",
