@@ -22,18 +22,18 @@
   },
   "autoload": {
     "psr-4": {
-      "CodelyTv\\Apps\\Mooc\\Backend\\": "apps/mooc/backend/src",
-      "CodelyTv\\Apps\\Mooc\\Frontend\\": "apps/mooc/frontend/src",
+      "StiSolutions\\Apps\\Scoti\\Backend\\": "apps/scoti/backend/src",
+      "StiSolutions\\Apps\\Scoti\\Frontend\\": "apps/scoti/frontend/src",
 
-      "CodelyTv\\Apps\\Backoffice\\Backend\\": "apps/backoffice/backend/src",
-      "CodelyTv\\Apps\\Backoffice\\Frontend\\": "apps/backoffice/frontend/src",
+      "StiSolutions\\Apps\\Imovit\\Backend\\": "apps/imovit/backend/src",
+      "StiSolutions\\Apps\\Imovit\\Frontend\\": "apps/imovit/frontend/src",
 
-      "CodelyTv\\": ["src"]
+      "StiSolutions\\": ["src"]
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "CodelyTv\\Tests\\": ["tests/src"]
+      "StiSolutions\\Tests\\": ["tests/src"]
     }
   }
 }
