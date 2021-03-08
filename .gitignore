@@ -50,3 +50,10 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+
+# Idea
+.idea/
+
+# cache
+apps/imovit/backend/var/cache/
+apps/scuti/backend/var/cache/
