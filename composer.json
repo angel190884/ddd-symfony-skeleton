@@ -1,5 +1,5 @@
 {
-  "name": "codelytv/ddd-skeleton",
+  "name": "sti-solutions/ddd-skeleton",
   "license": "MIT",
   "type": "project",
   "description": "StiSolutions - Monorepository",
@@ -17,8 +17,8 @@
   },
   "require-dev": {
     "ext-xdebug": "*",
-
-    "roave/security-advisories": "dev-master"
+    "roave/security-advisories": "dev-master",
+    "behat/behat": "^3.8"
   },
   "autoload": {
     "psr-4": {
