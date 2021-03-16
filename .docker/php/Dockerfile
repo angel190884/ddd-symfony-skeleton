@@ -1,7 +1,7 @@
 # ./docker/php/Dockerfile
 FROM php:7.2-fpm-alpine
 
-ARG APCU_VERSION
+ARG APCU_VERSION=5.1.20
 
 RUN apk update \
     && apk add  --no-cache \
