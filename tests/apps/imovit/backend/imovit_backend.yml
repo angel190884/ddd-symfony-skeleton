@@ -1,0 +1,14 @@
+imovit_backend:
+  extensions:
+    FriendsOfBehat\SymfonyExtension:
+      bootstrap: apps/imovit/bootstrap.php
+      kernel:
+        class: StiSolutions\Apps\Imovit\Backend\ImovitBackendKernel
+        path: ~
+        environment: ~
+        debug: ~
+  suites:
+    health_check:
+      paths: [ tests/apps/imovit/backend/features/health_check ]
+      contexts:
+        - StiSolutions\Tests\Shared\Infrastructure\Behat\ApiRequestContext
