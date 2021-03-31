@@ -1,0 +1,30 @@
+scuti_backend:
+  extensions:
+    FriendsOfBehat\SymfonyExtension:
+      bootstrap: apps/scuti/bootstrap.php
+      kernel:
+        class: StiSolutions\Apps\Scuti\Backend\ScutiBackendKernel
+        path: ~
+        environment: test
+        debug: ~
+    Behatch\Extension: ~
+    Behat\MinkExtension:
+      sessions:
+        default:
+          symfony: ~
+  suites:
+    default:
+      contexts:
+        - Behat\MinkExtension\Context\MinkContext
+        - behatch:context:json
+        - behatch:context:rest
+        - behatch:context:browser
+        - behatch:context:debug
+        - behatch:context:system
+        - behatch:context:table
+        - behatch:context:xml
+    health_check:
+      paths: [ tests/apps/scuti/backend/features/health_check ]
+      contexts:
+        - StiSolutions\Tests\Shared\Infrastructure\Behat\ApiRequestContext
+        - StiSolutions\Tests\Shared\Infrastructure\Behat\ApiResponseContext

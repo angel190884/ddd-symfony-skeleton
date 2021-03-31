@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace StiSolutions\Apps\Scuti\Backend\Controller\HealthCheck;
 
-use StiSolutions\Shared\Infrastructure\RandomNumberGenerator;
+use StiSolutions\Shared\Domain\RandomNumberGenerator;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

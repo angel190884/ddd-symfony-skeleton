@@ -32,21 +32,18 @@ final class ImovitBackendKernel extends Kernel
         return \dirname(__DIR__);
     }
 
-    /*
-     * Cargar todos los ficheros de configuración con extensión xml o yaml que existan en la carpeta ‘/config’
-     */
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void
     {
         $container->addResource(new FileResource($this->getProjectDir().'/config/bundles.php'));
         $container->setParameter('container.dumper.inline_class_loader', true);
         $confDir = $this->getProjectDir().'/config';
 
-        $loader->load($confDir.'/*'.self::CONFIG_EXTS, 'glob');
+        $loader->load($confDir.'/services'.self::CONFIG_EXTS, 'glob');
+        $loader->load($confDir.'/services_'.$this->environment.self::CONFIG_EXTS, 'glob');
+        $loader->load($confDir.'/services/*'.self::CONFIG_EXTS, 'glob');
+
     }
 
-    /*
-     * Sobreescribir el método configureRoutes para indicar dónde tendremos las rutas
-     */
     protected function configureRoutes(RouteCollectionBuilder $routes): void
     {
         $confDir = $this->getProjectDir().'/config';

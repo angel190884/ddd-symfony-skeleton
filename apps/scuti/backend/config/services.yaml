@@ -3,7 +3,6 @@ services:
     autoconfigure: true
     autowire: true
 
-
   StiSolutions\Apps\Scuti\Backend\Controller\:
     resource: '../src/Controller'
     tags: ['controller.service_arguments']
