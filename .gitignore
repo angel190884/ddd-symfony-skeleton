@@ -59,3 +59,9 @@ apps/imovit/backend/var/cache/
 apps/scuti/backend/var/cache/
 
 composer.lock
+
+/.env.local
+/.env.*.local
+
+/apps/*/*/var/
+
