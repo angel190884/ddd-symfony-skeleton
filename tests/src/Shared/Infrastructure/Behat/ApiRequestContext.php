@@ -2,67 +2,39 @@
 
 namespace StiSolutions\Tests\Shared\Infrastructure\Behat;
 
-use Behat\Behat\Context\Context;
-use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Gherkin\Node\PyStringNode;
-use GuzzleHttp\Client;
-use GuzzleHttp\RequestOptions;
+use Behat\Mink\Session;
+use Behat\MinkExtension\Context\RawMinkContext;
+use StiSolutions\Tests\Shared\Infrastructure\Mink\MinkHelper;
+use StiSolutions\Tests\Shared\Infrastructure\Mink\MinkSessionRequestHelper;
 
 
 /**
  * Defines application features from the specific context.
  */
-class ApiRequestContext implements Context
+final class ApiRequestContext extends RawMinkContext
 {
-    Const URL = "localhost:9000";
-    private $client;
-    private $body;
-    /**
-     * @var mixed
-     */
-    private $response;
+    private $request;
 
-    /**
-     * Initializes context.
-     *
-     * Every scenario gets its own context instance.
-     * You can also pass arbitrary arguments to the
-     * context constructor through behat.yml.
-     */
-    public function __construct()
+    public function __construct(Session $session)
     {
-        $this->client = new Client();
+        $this->request = new MinkSessionRequestHelper(new MinkHelper($session));
     }
 
     /**
-     * @Given I send a :method request to :url and body:
-     * @param string $method
-     * @param string $uri
-     * @param $body
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @Given I send a :method request to :url
      */
-    public function iSendAGetRequestTo($method = "GET", $uri = '/', $body)
+    public function iSendAGetRequestTo($method, $url): void
     {
-        $this->body = $body;
-        $url = self::URL.$uri;
-        $this->response =
-            $this->client->get($url,
-                [
-                    RequestOptions::JSON => json_decode($this->body)
-                ]
-            );
-        var_dump($this->response);
+        $this->request->sendRequest($method, $url);
     }
 
     /**
-     * @Then the response content should be:
-     * @param PyStringNode $code
-     * @return PyStringNode
+     * @Given I send a :method request to :url with body:
      */
-    public function theResponseContentShouldBe(PyStringNode $code): PyStringNode
+    public function iSendARequestToWithBody($method, $url, PyStringNode $body): void
     {
-        return $this->response = $code;
+        $this->request->sendRequestWithPyStringNode($method, $this->locatePath($url), $body);
     }
-
 
 }

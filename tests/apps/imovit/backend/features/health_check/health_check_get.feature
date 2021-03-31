@@ -3,18 +3,13 @@ Feature: Api status
   As a health check
   I want to check the api status
 
-  Scenario: Check the api status
-    Given I send a GET request to "/health-check" and body:
-      """
-      {
-
-      }
-      """
+  Scenario: Response body
+    Given I send a "GET" request to "/health-check"
     Then the response content should be:
-      """
-      {
-          "app": "imovit",
-          "status": "ok",
-          "rand": 1
-      }
-      """
+    """
+    {
+      "app":"imovit",
+      "status":"ok",
+      "rand":3
+    }
+    """
