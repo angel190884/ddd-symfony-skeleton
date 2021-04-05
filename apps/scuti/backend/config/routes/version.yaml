@@ -1,0 +1,4 @@
+version_get:
+  path: /version
+  controller: StiSolutions\Apps\Scuti\Backend\Controller\Version\VersionGetController
+  methods:  [GET]
