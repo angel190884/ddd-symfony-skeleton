@@ -2,7 +2,7 @@
   "name": "sti-solutions/ddd-skeleton",
   "license": "MIT",
   "type": "project",
-  "description": "StiSolutions - Monorepository",
+  "description": "StiSolutions backend",
   "require": {
     "php": ">=7.2.5",
 
