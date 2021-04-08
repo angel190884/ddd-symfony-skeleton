@@ -1,3 +1,4 @@
 imports:
   - tests/apps/imovit/backend/imovit_backend.yml
   - tests/apps/scuti/backend/scuti_backend.yml
+  - tests/apps/telia/backend/telia_backend.yml

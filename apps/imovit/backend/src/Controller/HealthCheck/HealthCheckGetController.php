@@ -22,9 +22,9 @@ final class HealthCheckGetController
     {
         return new JsonResponse(
             [
-                'app' => 'imovit',
-                'status' => 'ok',
-                'rand'         => $this->generator->generate(),
+                'app'       => 'imovit',
+                'status'    => 'ok',
+                'rand'      => $this->generator->generate(),
             ]
         );
     }

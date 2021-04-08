@@ -7,6 +7,7 @@ services:
         - '.:/usr/src/app'
         - './.docker/nginx/imovit.conf:/etc/nginx/conf.d/imovit.conf:ro'
         - './.docker/nginx/scuti.conf:/etc/nginx/conf.d/scuti.conf:ro'
+        - './.docker/nginx/telia.conf:/etc/nginx/conf.d/telia.conf:ro'
       ports:
         - "80:80"
       depends_on:

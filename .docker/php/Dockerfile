@@ -29,3 +29,4 @@ RUN echo "apc.enable=1" > /usr/local/etc/php/php.ini
 WORKDIR /usr/src/app
 
 COPY . /usr/src/app
+

@@ -1,0 +1,30 @@
+telia_backend:
+  extensions:
+    FriendsOfBehat\SymfonyExtension:
+      bootstrap: apps/telia/bootstrap.php
+      kernel:
+        class: StiSolutions\Apps\Telia\Backend\TeliaBackendKernel
+        path: ~
+        environment: test
+        debug: ~
+    Behatch\Extension: ~
+    Behat\MinkExtension:
+      sessions:
+        default:
+          symfony: ~
+  suites:
+    default:
+      contexts:
+        - Behat\MinkExtension\Context\MinkContext
+        - behatch:context:json
+        - behatch:context:rest
+        - behatch:context:browser
+        - behatch:context:debug
+        - behatch:context:system
+        - behatch:context:table
+        - behatch:context:xml
+    health_check:
+      paths: [ tests/apps/telia/backend/features/health_check ]
+      contexts:
+        - StiSolutions\Tests\Shared\Infrastructure\Behat\ApiRequestContext
+        - StiSolutions\Tests\Shared\Infrastructure\Behat\ApiResponseContext

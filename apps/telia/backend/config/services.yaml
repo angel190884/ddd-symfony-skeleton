@@ -1,0 +1,11 @@
+services:
+  _defaults:
+    autoconfigure: true
+    autowire: true
+
+  StiSolutions\Apps\Telia\Backend\Controller\:
+    resource: '../src/Controller'
+    tags: ['controller.service_arguments']
+
+  StiSolutions\:
+    resource: '../../../../src'

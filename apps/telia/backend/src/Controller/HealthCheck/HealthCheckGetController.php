@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace StiSolutions\Apps\Scuti\Backend\Controller\HealthCheck;
+namespace StiSolutions\Apps\Telia\Backend\Controller\HealthCheck;
 
 use StiSolutions\Shared\Domain\RandomNumberGenerator;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -22,7 +22,7 @@ final class HealthCheckGetController
     {
         return new JsonResponse(
             [
-                'app'       => 'scuti',
+                'app'       => 'telia',
                 'status'    => 'ok',
                 'rand'      => $this->generator->generate(),
             ]

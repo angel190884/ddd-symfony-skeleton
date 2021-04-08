@@ -1,0 +1,12 @@
+framework:
+  test: true
+
+services:
+  _defaults:
+    autoconfigure: true
+    autowire: true
+
+  StiSolutions\Tests\:
+    resource: '../../../../tests/src/'
+
+  StiSolutions\Shared\Domain\RandomNumberGenerator: '@StiSolutions\Tests\Shared\Infrastructure\ConstantRandomNumberGenerator'

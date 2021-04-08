@@ -34,6 +34,9 @@
       "StiSolutions\\Apps\\Imovit\\Backend\\": "apps/imovit/backend/src",
       "StiSolutions\\Apps\\Imovit\\Frontend\\": "apps/imovit/frontend/src",
 
+      "StiSolutions\\Apps\\Telia\\Backend\\": "apps/telia/backend/src",
+      "StiSolutions\\Apps\\Telia\\Frontend\\": "apps/telia/frontend/src",
+
       "StiSolutions\\": ["src"]
     }
   },
