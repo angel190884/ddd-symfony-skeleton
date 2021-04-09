@@ -1,5 +1,5 @@
 # ./docker/php/Dockerfile
-FROM php:7.2-fpm-alpine
+FROM php:7.4-fpm-alpine
 
 ARG APCU_VERSION=5.1.20
 
@@ -9,6 +9,7 @@ RUN apk update \
     curl \
     icu-dev \
     libxml2-dev \
+    libzip-dev \
     g++ \
     make \
     autoconf \
