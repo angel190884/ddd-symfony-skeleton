@@ -1,4 +1,4 @@
-Feature: Api status
+Feature: Api status Telia
   In order to know the server is up and running
   As a health check
   I want to check the api status
