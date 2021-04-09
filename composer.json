@@ -4,7 +4,7 @@
   "type": "project",
   "description": "StiSolutions backend",
   "require": {
-    "php": ">=7.2.5",
+    "php": ">=7.4.16",
 
     "ext-apcu": "*",
     "ext-json": "*",
@@ -24,7 +24,8 @@
     "behatch/contexts": "^3.3",
     "friends-of-behat/mink-browserkit-driver": "^1.5",
 
-    "phpunit/phpunit": "^8.5"
+    "phpunit/phpunit": "^8.5",
+    "mockery/mockery": "^1.4"
   },
   "autoload": {
     "psr-4": {
