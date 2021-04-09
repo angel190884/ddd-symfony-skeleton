@@ -24,7 +24,7 @@ final class HealthCheckGetController
             [
                 'app'       => 'telia',
                 'status'    => 'ok',
-                'rand'      => $this->generator->generate(),
+                'rand'      => $this->generator->generate()
             ]
         );
     }
