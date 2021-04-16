@@ -21,7 +21,9 @@ final class HealthCheckGetControllerTest extends TestCase
         $this->controller = new HealthCheckGetController($this->randomNumberGenerator);
     }
 
-    public function testPruebaDeIgualdadParaPruebaPhpUnit()
+
+    /** @test */
+    public function health_check_imovit()
     {
         $expected = new JsonResponse();
         $expected->setData(
