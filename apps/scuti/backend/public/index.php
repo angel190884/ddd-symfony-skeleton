@@ -4,7 +4,7 @@ use StiSolutions\Apps\Scuti\Backend\ScutiBackendKernel;
 use Symfony\Component\ErrorHandler\Debug;
 use Symfony\Component\HttpFoundation\Request;
 
-require dirname(__DIR__).'/../bootstrap.php';
+require dirname(__DIR__).'/../../bootstrap.php';
 
 if ($_SERVER['APP_DEBUG']) {
     umask(0000);
