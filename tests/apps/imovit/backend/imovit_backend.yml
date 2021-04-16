@@ -1,7 +1,7 @@
 imovit_backend:
   extensions:
     FriendsOfBehat\SymfonyExtension:
-      bootstrap: apps/imovit/bootstrap.php
+      bootstrap: apps/bootstrap.php
       kernel:
         class: StiSolutions\Apps\Imovit\Backend\ImovitBackendKernel
         path: ~

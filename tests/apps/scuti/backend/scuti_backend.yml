@@ -1,7 +1,7 @@
 scuti_backend:
   extensions:
     FriendsOfBehat\SymfonyExtension:
-      bootstrap: apps/scuti/bootstrap.php
+      bootstrap: apps/bootstrap.php
       kernel:
         class: StiSolutions\Apps\Scuti\Backend\ScutiBackendKernel
         path: ~
