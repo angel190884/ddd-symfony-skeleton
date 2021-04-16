@@ -5,11 +5,12 @@ declare(strict_types=1);
 namespace StiSolutions\Apps\Telia\Backend\Controller\Latencies;
 
 
+use StiSolutions\Shared\Infrastructure\Symfony\ApiController;
 use StiSolutions\Telia\Latencies\Application\LatencyCreator;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-final class LatenciesPutController
+final class LatenciesPutController extends ApiController
 {
     private LatencyCreator $creator;
 
@@ -25,7 +26,7 @@ final class LatenciesPutController
      */
     public function __invoke(string $id, Request $request): Response
     {
-        $timestamp = $request->attributes->get('timestamp');
+        $timestamp = $request->get('timestamp');
         $timestampMessage = $request->get('timestamp_message');
         $timestampJson = $request->get('timestamp_json');
         $timestampSend = $request->get('timestamp_send');
