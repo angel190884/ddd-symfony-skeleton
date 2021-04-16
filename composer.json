@@ -26,8 +26,7 @@
     "friends-of-behat/mink-browserkit-driver": "^1.5",
 
     "phpunit/phpunit": "^8.5",
-    "mockery/mockery": "^1.4",
-    "symfony/maker-bundle": "^1.30"
+    "mockery/mockery": "^1.4"
   },
   "autoload": {
     "psr-4": {
