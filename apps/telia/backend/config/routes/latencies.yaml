@@ -1,0 +1,4 @@
+latencies_put:
+    path: /latencies/{id}
+    controller: StiSolutions\Apps\Telia\Backend\Controller\Latencies\LatenciesPutController
+    methods:  [PUT]

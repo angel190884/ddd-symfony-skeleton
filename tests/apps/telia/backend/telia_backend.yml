@@ -28,3 +28,8 @@ telia_backend:
       contexts:
         - StiSolutions\Tests\Shared\Infrastructure\Behat\ApiRequestContext
         - StiSolutions\Tests\Shared\Infrastructure\Behat\ApiResponseContext
+    latencies:
+      paths: [ tests/apps/telia/backend/features/latencies ]
+      contexts:
+        - StiSolutions\Tests\Shared\Infrastructure\Behat\ApiRequestContext
+        - StiSolutions\Tests\Shared\Infrastructure\Behat\ApiResponseContext
